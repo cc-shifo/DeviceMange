@@ -7,9 +7,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.telephony.PhoneNumberUtils;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.javen.devicemange.R;
@@ -83,6 +85,15 @@ public class DeviceActivity extends AppCompatActivity {
 
     public void simulateClick(View view){
         Toast.makeText(this, "simulateClick clicked", Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickFormatPhoneNum(View view) {
+        // 131 2868 1717
+        String num = PhoneNumberUtils.formatNumber("13128681717", "CN");
+
+        num = PhoneNumberUtils.formatNumber1("13128681717", "CN");
+        TextView textView = (TextView) findViewById(R.id.tv_hello_world);
+        textView.setText(num);
     }
 
     //模拟点击事件

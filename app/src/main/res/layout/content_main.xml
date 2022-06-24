@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:id="@+id/id_content"
    >
 
     <TextView
+        android:id="@+id/tv_hello_world"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
@@ -61,4 +63,13 @@
         android:layout_height="wrap_content"
         android:onClick="simulateClick"
         android:text="模拟点击"/>
+
+
+    <Button
+        android:id="@+id/btn_format_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickFormatPhoneNum"
+        android:text="格式化"
+        />
 </LinearLayout>
